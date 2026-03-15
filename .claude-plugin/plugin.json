@@ -2,5 +2,7 @@
   "name": "flutter-getx-toolkit",
   "version": "1.0.0",
   "description": "Scaffolding, review agents, and architecture rules for Flutter + GetX projects",
-  "author": "liyuanxin"
+  "author": {
+    "name": "liyuanxin"
+  }
 }
