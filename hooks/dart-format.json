@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "filepath=$(cat - | jq -r '.tool_input.file_path // .tool_input.path // empty') && if echo \"$filepath\" | grep -q '\\.dart$'; then dart format \"$filepath\" 2>/dev/null; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
